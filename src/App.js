@@ -5,14 +5,20 @@ import DynamicTable from './components/dynamicTable/DynamicTable';
 import logo from './logo.svg';
 import './App.css';
 import TodoApp from './components/todo/TodoApp'
+import data from './components/dynamicTable/TableData';
 
 
  
 class App extends Component {
+  constructor(props){
+    super(props)
+  }
   render(){
     return (
       <div className='App'>
-      <TodoApp/>
+      <DynamicTable
+      thead = {data.thead}
+      tbody = {data.tbody}/>
       </div>
     )
   }
@@ -20,16 +26,16 @@ class App extends Component {
 }
 
 
-class LearningComp extends Component {
-  render() {
-    return (
-      <div className="LearningComp">
-       My Hello World 1
-       <FirstComp/>
-      </div>
-    );
-  }
-}
+// class LearningComp extends Component {
+//   render() {
+//     return (
+//       <div className="LearningComp">
+//        My Hello World 1
+//        <FirstComp/>
+//       </div>
+//     );
+//   }
+// }
 
 
 export default App;
